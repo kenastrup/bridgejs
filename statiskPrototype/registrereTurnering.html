@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <style>
+        input.parnr {
+            width: 50px;
+        }
+
+        input.kontrakt {
+            width: 100px;
+        }
+
+        input.spilleforer {
+            width: 20px;
+        }
+
+        input.stikk {
+            width: 50px;
+
+        }
+
+        body {
+            padding-top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">bridge.js</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Ny turnering</a></li>
+                <li><a href="#">Siste</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Ny turnering</h3>
+        </div>
+        <div class="panel-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="turneringsnavn" class="col-xs-2 control-label">Navn</label>
+                    <div class="col-xs-10">
+                        <input id="turneringsnavn" type="text" placeholder="Turneringsnavn" class="form-control col-xs-10"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dato" class="col-xs-2 control-label">Dato</label>
+                    <div class="col-xs-2">
+                        <input id="dato" type="date" class="form-control" style="width:150px"/>
+                    </div>
+                    <label for="antall-spill" class="col-xs-2 control-label">Antall spill</label>
+                    <div class="col-xs-2">
+                        <input id="antall-spill" type="number" min="1" max="200" class="form-control"/>
+                    </div>
+                    <label for="antall-par" class="col-xs-2 control-label">Antall par</label>
+                    <div class="col-xs-2">
+                        <input id="antall-par" type="number" min="1" max="200" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button id="avbryt" type="button" class="btn btn-primary"><< Avbryt</button>
+                    <a href="registrereSpill.html" class="btn btn-primary">Neste >></a>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

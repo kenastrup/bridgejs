@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Ny turnering</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" class="form-horizontal">
+            <div class="form-group">
+                <label for="navn" class="col-xs-2 control-label">Navn</label>
+                <div class="col-xs-10">
+                    <input id="navn" type="text" placeholder="Turneringsnavn" class="form-control col-xs-10"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dato" class="col-xs-2 control-label">Dato</label>
+                <div class="col-xs-2">
+                    <input id="dato" type="date" class="form-control" style="width:150px"/>
+                </div>
+                <label for="antall_spill" class="col-xs-2 control-label">Antall spill</label>
+                <div class="col-xs-2">
+                    <input id="antall_spill" type="number" min="1" max="200" class="form-control"/>
+                </div>
+                <label for="antall_par" class="col-xs-2 control-label">Antall par</label>
+                <div class="col-xs-2">
+                    <input id="antall_par" type="number" min="1" max="200" class="form-control"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button id="avbryt" type="button" class="btn btn-primary"><< Avbryt</button>
+                <a id="lagre" class="btn btn-primary">Neste >></a>
+            </div>
+        </form>
+    </div>
+</div>

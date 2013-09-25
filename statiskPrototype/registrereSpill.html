@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<style>
+		input.parnr {
+			width:50px;
+		}
+		input.kontrakt {
+			width:100px;
+		}
+		input.spilleforer {
+			width: 20px;
+		}
+		input.stikk {
+			width:50px;
+
+		}
+        body { padding-top: 70px; }
+		</style>
+	</head>
+	<body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">bridge.js</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Ny turnering</a></li>
+                    <li><a href="#">Siste</a></li>
+                </ul>
+
+                <p class="navbar-text">Glassturneringa</p>
+                <p class="navbar-text">12-12-2012</p>
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Søk</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+		<div class="row">
+			<div id="spill-liste" class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Spill</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>nr</th>
+                                <th>Giv</th>
+                                <th>Sone</th>
+                            </tr>
+                            <tr class="success">
+                                <td>1</td>
+                                <td>N</td>
+                                <td>Ingen</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ø</td>
+                                <td>Nord/Syd</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>S</td>
+                                <td>Øst/Vest</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>V</td>
+                                <td>Alle</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+			</div>
+
+			<div id="spill-resultat" class="col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Resultater <small>Spill 1, Nord, Ingen</small></h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>NS</th>
+                                <th>ØV</th>
+                                <th>Kontrakt</th>
+                                <th>Spillefører</th>
+                                <th>Stikk</th>
+                                <th>NS</th>
+                                <th>ØV</th>
+                                <th>Poeng NS</th>
+                                <th>Poeng ØV</th>
+                            </tr>
+                            <tr>
+                                <td><input class="parnr" id="ny-ns" type="number"/></td>
+                                <td><input class="parnr" id="ny-øv" type="number"/></td>
+                                <td><input class="kontrakt" id="ny-kontrakt" type="text"/></td>
+                                <td><input class="spilleforer" id="ny-spillefører" type="text"/></td>
+                                <td><input class="stikk" id="ny-stikk" type="number"/></td>
+                                <td><output id="ny-ns-score"/></td>
+                                <td><output id="ny-øv-score"/></td>
+                                <td><output id="ny-ns-poeng"/></td>
+                                <td><output id="ny-øv-poeng"/></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1 kl</td>
+                                <td>N</td>
+                                <td>10</td>
+                                <td>130</td>
+                                <td/>
+                                <td>2</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>1 ru</td>
+                                <td>Ø</td>
+                                <td>10</td>
+                                <td></td>
+                                <td>130</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>3 NT</td>
+                                <td>N</td>
+                                <td>9</td>
+                                <td>400</td>
+                                <td></td>
+                                <td>6</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>2 NT</td>
+                                <td>N</td>
+                                <td>10</td>
+                                <td>180</td>
+                                <td></td>
+                                <td>4</td>
+                                <td>2</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+			</div>
+        </div>
+
+		<div class="row">
+            <div id="par" class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Parene</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-striped">
+                            <tr>
+                                <th>nr</th>
+                                <th>Navn</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Ken Astrup - Bjørn E. Johansen</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kjetil Astrup - Jonny Bertheussen</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tor E. Hansen - Jan Kristensen</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Dagfinn Bakken - Alf Andersen</td>
+                            </tr>
+                        </table>
+                    </div>
+    			</div>
+            </div>
+
+            <div id="spillet" style="width:400px;background-color:lightgray;" class="col-md-3">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <table>
+                            <caption>Nord</caption>
+                            <tr>
+                                <th>sp</th>
+                                <td>KDJ76</td>
+                            </tr>
+                            <tr>
+                                <th>hj</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>ru</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>kl</th>
+                                <td>KD</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <table>
+                            <caption>Vest</caption>
+                            <tr>
+                                <th>sp</th>
+                                <td>KDJ76</td>
+                            </tr>
+                            <tr>
+                                <th>hj</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>ru</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>kl</th>
+                                <td>KD</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <table>
+                            <caption>Øst</caption>
+                            <tr>
+                                <th>sp</th>
+                                <td>KDJ76</td>
+                            </tr>
+                            <tr>
+                                <th>hj</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>ru</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>kl</th>
+                                <td>KD</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <table>
+                            <caption>Syd</caption>
+                            <tr>
+                                <th>sp</th>
+                                <td>KDJ76</td>
+                            </tr>
+                            <tr>
+                                <th>hj</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>ru</th>
+                                <td>KDJ</td>
+                            </tr>
+                            <tr>
+                                <th>kl</th>
+                                <td>KD</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    	<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
