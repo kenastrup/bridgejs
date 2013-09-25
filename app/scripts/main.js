@@ -13,10 +13,10 @@ require.config({
             ],
             exports: 'Backbone'
         },
-//        'backbone.localStorage': {
-//            deps: ['backbone'],
-//            exports: 'Backbone'
-//        },
+        'backbone.localStorage': {
+            deps: ['backbone'],
+            exports: 'Backbone'
+        },
         bootstrap: {
             deps: ['jquery'],
             exports: 'jquery'

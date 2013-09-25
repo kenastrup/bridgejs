@@ -1,14 +1,12 @@
-/*global define*/
-
-define([
-    'underscore',
-    'backbone',
-    'backbone.localStorage'
-], function (_, Backbone) {
+/*global define, require*/
+define(function (require) {
     'use strict';
 
-    var TurneringModel = Backbone.Model.extend({
+    var Backbone = require('backbone'),
+        TurneringModel;
+    require('backbone.localStorage');
 
+    TurneringModel = Backbone.Model.extend({
         localStorage: new Backbone.LocalStorage("TurneringCollection"),
 
         defaults: {

@@ -85,6 +85,7 @@ module.exports = function (grunt) {
                         return [
                             mountFolder(connect, '.tmp'),
                             mountFolder(connect, 'test'),
+                            mountFolder(connect, 'app'),
                             mountFolder(connect, yeomanConfig.app)
                         ];
                     }
