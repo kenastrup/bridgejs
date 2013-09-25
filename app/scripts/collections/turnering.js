@@ -10,7 +10,8 @@ define(function (require) {
     require('backbone.localStorage');
 
     TurneringCollection = Backbone.Collection.extend({
-        localStorage: new Backbone.LocalStorage("TurneringCollection"),
+        localStorage: new Backbone.LocalStorage('TurneringCollection'),
+
         model: TurneringModel
     });
 
