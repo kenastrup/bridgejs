@@ -9,13 +9,13 @@ define(function (require) {
             var turnering = new TurneringModel({
                 navn: 'turneringa',
                 dato: '2000-01-01',
-                antall_spill: 1,
-                antall_par: 2
+                antallSpill: 1,
+                antallPar: 2
             });
             expect(turnering.get('navn')).to.equal('turneringa');
             expect(turnering.get('dato')).to.equal('2000-01-01');
-            expect(turnering.get('antall_spill')).to.equal(1);
-            expect(turnering.get('antall_par')).to.equal(2);
+            expect(turnering.get('antallSpill')).to.equal(1);
+            expect(turnering.get('antallPar')).to.equal(2);
         });
 
 
@@ -24,8 +24,8 @@ define(function (require) {
             var turnering = new TurneringModel();
             expect(turnering.get('navn')).to.equal('');
             expect(turnering.get('dato')).to.equal('');
-            expect(turnering.get('antall_spill')).to.equal(0);
-            expect(turnering.get('antall_par')).to.equal(0);
+            expect(turnering.get('antallSpill')).to.equal(0);
+            expect(turnering.get('antallPar')).to.equal(0);
         });
 
         //synkronisering med storage
@@ -34,8 +34,8 @@ define(function (require) {
             turnering = new TurneringModel({
                 navn: 'turneringa',
                 dato: '2000-01-01',
-                antall_spill: 1,
-                antall_par: 2
+                antallSpill: 1,
+                antallPar: 2
             });
             turnering.save();
 

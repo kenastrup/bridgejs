@@ -1,4 +1,4 @@
-/*global define, require*/
+/*global define*/
 define(function (require) {
     'use strict';
 
@@ -7,13 +7,13 @@ define(function (require) {
     require('backbone.localStorage');
 
     TurneringModel = Backbone.Model.extend({
-        localStorage: new Backbone.LocalStorage("TurneringCollection"),
+        localStorage: new Backbone.LocalStorage('TurneringCollection'),
 
         defaults: {
-            navn: "",
-            dato: "",
-            antall_spill: 0,
-            antall_par: 0
+            navn: '',
+            dato: '',
+            antallSpill: 0,
+            antallPar: 0
         }
     });
 

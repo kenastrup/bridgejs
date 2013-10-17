@@ -20,10 +20,10 @@ define([
         },
 
         lagre: function () {
-            this.model.set('navn', $("#navn").val());
-            this.model.set('dato', $("#dato").val());
-            this.model.set('antall_spill', $("#antall_spill").val());
-            this.model.set('antall_par', $("#antall_par").val());
+            this.model.set('navn', $('#navn').val());
+            this.model.set('dato', $('#dato').val());
+            this.model.set('antallSpill', $('#antall_spill').val());
+            this.model.set('antallPar', $('#antall_par').val());
             this.model.save();
         },
 

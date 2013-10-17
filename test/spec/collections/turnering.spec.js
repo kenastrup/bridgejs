@@ -1,4 +1,4 @@
-/*global define, describe, require, it, expect, done, before, after, beforeEach, xit */
+/*global define, describe, it, expect, after, beforeEach, xit */
 define(function (require) {
     'use strict';
     var TurneringModel = require('models/turnering'),
