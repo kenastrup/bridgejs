@@ -18,20 +18,20 @@ define([
 
     BridgeRouter = Backbone.Router.extend({
         routes: {
-            "": "turneringsliste",
-            "ny": "nyTurnering"
+            '': 'turneringsliste',
+            'ny': 'nyTurnering'
         },
 
         initialize: function () {
-            console.log("init ruteren");
+            console.log('init ruteren');
             turneringModel = new TurneringModel();
             turneringCollection = new TurneringCollection();
             turneringslisteView = new TurneringslisteView({
-                el: "#innhold",
+                el: '#innhold',
                 collection: turneringCollection
             });
             nyTurneringView = new NyTurneringView({
-                el: "#innhold",
+                el: '#innhold',
                 model: turneringModel
             });
         },
