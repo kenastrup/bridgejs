@@ -31,7 +31,7 @@ require.config({
 });
 
 
-require(['require', 'chai', 'mocha', 'jquery'], function (require, chai) {
+require(['require', 'chai', 'jquery'], function (require, chai) {
     // Chai
     expect = chai.expect;
 
@@ -40,12 +40,17 @@ require(['require', 'chai', 'mocha', 'jquery'], function (require, chai) {
     mocha.setup('bdd');
 
     require([
-        '/spec/testen.js',
-        '/spec/models/turnering.spec.js',
-        '/spec/collections/turnering.spec.js'
+        'spec/models/turnering.spec.js',
+        'spec/collections/turnering.spec.js'
     ], function (require) {
-        mocha.run();
-    });
+        console.log('faaaaaaan');
+        if ( window.mochaPhantomJS) {
+            console.log('mochaaaaa phantom');
+            mochaPhantomJS.run();
+        } else {
+            mocha.run();
+        }
 
+    });
 });
 
