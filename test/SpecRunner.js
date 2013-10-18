@@ -35,7 +35,6 @@ require(['require', 'chai', 'jquery'], function (require, chai) {
     // Chai
     expect = chai.expect;
 
-
     /*globals mocha */
     mocha.setup('bdd');
 
@@ -43,14 +42,7 @@ require(['require', 'chai', 'jquery'], function (require, chai) {
         'spec/models/turnering.spec.js',
         'spec/collections/turnering.spec.js'
     ], function (require) {
-        console.log('faaaaaaan');
-        if ( window.mochaPhantomJS) {
-            console.log('mochaaaaa phantom');
-            mochaPhantomJS.run();
-        } else {
-            mocha.run();
-        }
-
+        mocha.run();
     });
 });
 
