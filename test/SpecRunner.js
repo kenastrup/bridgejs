@@ -40,7 +40,8 @@ require(['require', 'chai', 'jquery'], function (require, chai) {
 
     require([
         'spec/models/turnering.spec.js',
-        'spec/collections/turnering.spec.js'
+        'spec/collections/turnering.spec.js',
+        'spec/views/nyTurnering.js'
     ], function (require) {
         mocha.run();
     });
